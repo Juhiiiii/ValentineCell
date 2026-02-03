@@ -187,6 +187,10 @@ noBtn.addEventListener("click", () => {
   }, 1000);
 });
 
+noBtn.addEventListener("touchstart", () => {
+  moveNoButton();
+});
+
 function playMusic() {
   const music = document.getElementById("bgMusic");
   music.volume = 0.6;
@@ -222,3 +226,4 @@ document.addEventListener("mousemove", (e) => {
 
   setTimeout(() => heart.remove(), 1000);
 });
+
