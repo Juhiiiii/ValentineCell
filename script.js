@@ -115,6 +115,15 @@ function launchConfetti() {
     setTimeout(() => confetti.remove(), 2000);
   }
 }
+function moveNoButton() {
+  const maxX = window.innerWidth - noBtn.offsetWidth - 20;
+  const maxY = window.innerHeight - noBtn.offsetHeight - 20;
+
+  const x = Math.random() * maxX;
+  const y = Math.random() * maxY;
+
+  noBtn.style.transform = `translate(${x}px, ${y}px)`;
+}
 
 // function launchHearts() {
 //   for (let i = 0; i < 30; i++) {
@@ -226,4 +235,5 @@ document.addEventListener("mousemove", (e) => {
 
   setTimeout(() => heart.remove(), 1000);
 });
+
 
